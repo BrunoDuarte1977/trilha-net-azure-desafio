@@ -22,10 +22,12 @@ namespace TrilhaNetAzureDesafio.Models
             JSON = JsonSerializer.Serialize(funcionario);
             PartitionKey = partitionKey;
             RowKey = rowKey;
+            FuncionarioId = funcionario.Id.ToString(); // Adiciona a propriedade FuncionarioId
         }
 
         public TipoAcao TipoAcao { get; set; }
         public string JSON { get; set; }
+        public string FuncionarioId { get; set; } // Adiciona a propriedade FuncionarioId
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
         public DateTimeOffset? Timestamp { get; set; }
